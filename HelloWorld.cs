@@ -6,6 +6,8 @@ namespace hello_world
     {
         public string ReturnMessage()
         {
+            var hashProvider = new SHA1CryptoServiceProvider();
+            var hash = hashProvider.ComputeHash("Hello World");
             return "Hello World!";
         }
     }
